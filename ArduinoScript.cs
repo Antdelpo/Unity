@@ -14,12 +14,11 @@ public class ArduinoScript : MonoBehaviour
         sp.ReadTimeout = 1;
     }
 
-    // Update is called once per frame
     void Update()
     {
        if (sp.ReadyByte() == 1)
 	{
- 	transform.Translate(Vector3.left)
+ 	transform.Translate(Vector3.left * movementModifier);
 	}
     }
 }
